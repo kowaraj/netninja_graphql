@@ -1,7 +1,7 @@
 const graphql = require('graphql');
 const _ = require('lodash');
 const Book = require('../models/book');
-const Author = require('../models/author')
+const Author = require('../models/author') 
 
 const { 
     GraphQLObjectType, 
@@ -22,6 +22,7 @@ const BookType = new GraphQLObjectType({
             type: AuthorType, 
             resolve(parent, args){
                 //return _.find(authors, {id: parent.authorId} )
+                return Author.findById(parent.authorId);
             }
         }
     })
@@ -57,6 +58,7 @@ const RootQuery = new GraphQLObjectType({
                 // { data: "test data"}
                 console.log(typeof(args.id))
                 //return _.find(books, {id: args.id} );
+                return Book.findById(args.id);
             }
         },
         author: {
@@ -124,10 +126,3 @@ module.exports = new GraphQLSchema({
     mutation: Mutation 
 });
 
-
-// mutation{
-// 	addAuthor(name:"Andrey", age:66) {
-//     name
-// 		age
-// 	}
-// }

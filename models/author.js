@@ -1,3 +1,6 @@
+// The Author model 
+// = it is how we interact with the Author collection on MongoDB
+
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 

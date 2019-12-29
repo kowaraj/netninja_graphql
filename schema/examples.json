@@ -1,0 +1,27 @@
+/// mutations
+
+mutation{
+	addAuthor(name:"author1", age:101) {
+    name
+		age
+	}
+}
+mutation{
+	addAuthor(name: "author2", age: 102) {
+     id
+    name
+  }
+}
+mutation{
+	addBook(name:"book1", genre:"genre1", authorId: "5e08d54f9a92ef490bab55a4") {
+    name
+  }
+}
+/// query
+
+{
+	authors(){
+    id
+    name
+  }
+}

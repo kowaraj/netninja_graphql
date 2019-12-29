@@ -7,7 +7,7 @@ const mlab_login = require('./login_to_mlab')
 const app = express()
 
 mlab_login(mongoose);
-mongoose.connection.once('open', ()=>{console.log("Connected to MongoDB instance!")})
+mongoose.connection.once('open', ()=>{console.log("\nConnected to MongoDB instance!\n")})
 
 // Express doesn't know how to handle GraphQL, 
 // so it will pass the requests to...
