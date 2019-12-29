@@ -20,6 +20,15 @@ mutation{
 /// query
 
 {
+	author(id: "5e08d54f9a92ef490bab55a4") {
+    name
+    books {
+      id
+    }
+  }
+}
+
+{
 	authors(){
     id
     name
