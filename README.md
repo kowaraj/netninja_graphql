@@ -12,6 +12,8 @@
 
 ### Frontend
 
-- Graphiql (for now)
+- Browser
+  - React app (create-react-app )
+  - Apollo
 
 
