@@ -1,6 +1,4 @@
-/// mutations
-
-mutation{
+mutation {
 	addAuthor(name:"author1", age:101) {
     name
 		age
@@ -17,7 +15,6 @@ mutation{
     name
   }
 }
-/// query
 
 {
 	author(id: "5e08d54f9a92ef490bab55a4") {
