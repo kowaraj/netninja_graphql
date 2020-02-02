@@ -1,19 +1,18 @@
 # TheNetNinja's GraphQL + Mongoose + MongoDB tutorial
 
-### Backend
+### Backend (localhost:4000)
 
 - Server: Node.js 
   - Express app
   - GraphQL server (Mongoose)
-
-### Online databse
+### Online databse (mLab)
 
 - MongoDB (using mLab)
 
-### Frontend
+### Frontend (localhost:3000)
 
 - Browser
   - React app (create-react-app )
   - Apollo
-
+        
 
