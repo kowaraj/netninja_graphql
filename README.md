@@ -17,11 +17,11 @@
 - 31
   - "compose" (from 'react-apollo') is to bind multiple queries/mutations to a single component
 
-As 'compose' was removed from react-apollo, do:
-```
-  npm install lodash.flowright
-  import * as compose from 'lodash.flowright';
-```
+    As 'compose' was removed from react-apollo, do:
+    ```
+      npm install lodash.flowright
+      import * as compose from 'lodash.flowright';
+    ```
 
 - 32 
   - mutation's "variables" is to pass values into a mutation
