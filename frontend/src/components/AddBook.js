@@ -18,9 +18,10 @@ function DisplayAuthors(props)
         }
 }
 
-function submitTheForm(s, e) {
+function submitTheForm(s, e, props) {
     e.preventDefault();
     console.log(s);
+    props.addBookMutation_MYNAME(s);
 }
   
   function AddBook(props) {
@@ -30,7 +31,7 @@ function submitTheForm(s, e) {
     return (
   
 
-        <form id="add-book" onSubmit={ e=> submitTheForm(state, e)}>
+        <form id="add-book" onSubmit={ e=> submitTheForm(state, e, props)}>
 
         <div className="field">
             <label>Book name:</label>
@@ -61,6 +62,6 @@ function submitTheForm(s, e) {
   // do:
   export default compose(
             graphql(getAuthorsQuery, { name: "getAuthorsQuery_NAMEDHERE"}), 
-            graphql(addBookMutation, { name: "addBookMutation"})
+            graphql(addBookMutation, { name: "addBookMutation_MYNAME"})
         )(AddBook);
   
