@@ -7,13 +7,14 @@ import * as compose from 'lodash.flowright';
 
 function DisplayAuthors(props) 
 {
-        if (props.data.loading) 
+        const data = props.getAuthorsQuery_NAMEDHERE
+        if (data.loading) 
         {
           return <option> Loading authors... </option>
         }
         else
         {
-          return props.data.authors.map(a => {    return( <option key={a.id} value={a.id}> { a.name } </option> )     })
+          return data.authors.map(a => {    return( <option key={a.id} value={a.id}> { a.name } </option> )     })
         }
 }
 
@@ -59,7 +60,7 @@ function submitTheForm(s, e) {
   // export default BookList;
   // do:
   export default compose(
-            graphql(getAuthorsQuery, { name: "getAuthorsQuery"}), 
+            graphql(getAuthorsQuery, { name: "getAuthorsQuery_NAMEDHERE"}), 
             graphql(addBookMutation, { name: "addBookMutation"})
         )(AddBook);
   
