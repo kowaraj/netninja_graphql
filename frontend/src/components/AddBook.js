@@ -1,5 +1,5 @@
 import React from 'react';
-import {getAuthorsQuery, addBookMutation} from '../queries/queries';
+import {getAuthorsQuery, addBookMutation, getBooksQuery} from '../queries/queries';
 import {graphql } from 'react-apollo';
 import * as compose from 'lodash.flowright';
 
@@ -22,7 +22,9 @@ function submitTheForm(s, e, props) {
     e.preventDefault();
     console.log(s);
     props.addBookMutation_MYNAME({
-        variables: {name: s.name, genre: s.genre, authorId: s.authorId}});
+        variables: {name: s.name, genre: s.genre, authorId: s.authorId},
+        refetchQueries: [{query: getBooksQuery}]
+    });
 }
   
   function AddBook(props) {

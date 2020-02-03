@@ -24,4 +24,7 @@ As 'compose' was removed from react-apollo, do:
 ```
 
 - 32 
-  - "query variables" to pass values into a mutation
+  - mutation's "variables" is to pass values into a mutation
+
+- 33
+  - mutation's "refetchQueries" is to re-fetch the data
