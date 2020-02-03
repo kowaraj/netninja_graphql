@@ -21,7 +21,8 @@ function DisplayAuthors(props)
 function submitTheForm(s, e, props) {
     e.preventDefault();
     console.log(s);
-    props.addBookMutation_MYNAME(s);
+    props.addBookMutation_MYNAME({
+        variables: {name: s.name, genre: s.genre, authorId: s.authorId}});
 }
   
   function AddBook(props) {

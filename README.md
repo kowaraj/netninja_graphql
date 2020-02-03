@@ -22,3 +22,6 @@ As 'compose' was removed from react-apollo, do:
   npm install lodash.flowright
   import * as compose from 'lodash.flowright';
 ```
+
+- 32 
+  - "query variables" to pass values into a mutation
