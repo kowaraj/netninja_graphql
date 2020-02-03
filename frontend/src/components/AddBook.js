@@ -1,6 +1,8 @@
 import React from 'react';
 import {getAuthorsQuery, addBookMutation} from '../queries/queries';
 import {graphql } from 'react-apollo';
+import * as compose from 'lodash.flowright';
+
 
 
 function DisplayAuthors(props) 
@@ -56,5 +58,8 @@ function submitTheForm(s, e) {
   // instead of:
   // export default BookList;
   // do:
-  export default graphql(getAuthorsQuery)(AddBook);
+  export default compose(
+            graphql(getAuthorsQuery, { name: "getAuthorsQuery"}), 
+            graphql(addBookMutation, { name: "addBookMutation"})
+        )(AddBook);
   
