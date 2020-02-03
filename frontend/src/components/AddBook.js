@@ -1,18 +1,7 @@
 import React from 'react';
-
-// bind a query to the component to access the data
+import {getAuthorsQuery} from '../queries/queries';
 import {graphql } from 'react-apollo';
 
-// constructing a template for a query:
-import {gql} from 'apollo-boost';
-const getAuthorsQuery = gql`
-    {
-        authors {
-            name
-            id
-        }
-    }
-`
 
 function DisplayAuthors(props) 
 {

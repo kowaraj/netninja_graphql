@@ -1,18 +1,6 @@
 import React from 'react';
-
-// bind a query to the component to access the data
+import {getBooksQuery} from '../queries/queries';
 import {graphql } from 'react-apollo';
-
-// constructing a template for a query:
-import {gql} from 'apollo-boost';
-const getBooksQuery = gql`
-    {
-        books {
-            name
-            id
-        }
-    }
-`
 
 
 function f(props){
