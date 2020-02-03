@@ -17,6 +17,9 @@ function DisplayAuthors(props)
 
   
   function AddBook(props) {
+    const [state, setState] = React.useState({name:'', genre:'', authorId:''});
+
+    console.log(state);
     return (
   
 
@@ -24,17 +27,17 @@ function DisplayAuthors(props)
 
         <div className="field">
             <label>Book name:</label>
-            <input type="text" />
+            <input type="text" onChange={ (e) => setState({...state, name: e.target.value}) } />
         </div>
         
         <div className="field">
             <label>Genre:</label>
-            <input type="text" />
+            <input type="text"  onChange={ (e) => setState({...state, genre: e.target.value}) } />
         </div>
         
         <div className="field">
             <label>Author:</label>
-            <select>
+            <select  onChange={ (e) => setState({...state, authorId: e.target.value}) } >
                 {DisplayAuthors(props)}
             </select>
         </div>
