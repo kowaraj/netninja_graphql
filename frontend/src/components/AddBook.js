@@ -15,15 +15,19 @@ function DisplayAuthors(props)
         }
 }
 
+function submitTheForm(s, e) {
+    e.preventDefault();
+    console.log(s);
+}
   
   function AddBook(props) {
     const [state, setState] = React.useState({name:'', genre:'', authorId:''});
 
-    console.log(state);
+    //console.log(state);
     return (
   
 
-        <form id="add-book">
+        <form id="add-book" onSubmit={ e=> submitTheForm(state, e)}>
 
         <div className="field">
             <label>Book name:</label>
